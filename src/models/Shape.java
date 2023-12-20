@@ -39,12 +39,7 @@ public class Shape {
     }
 
     public double getAverage(){
-        double totalDistance = Double.MIN_VALUE;
-        for (int i = 0; i < pointsList.size()-1; i++){
-            double distance = pointsList.get(i).getDistance(pointsList.get(i + 1));
-            totalDistance = totalDistance + distance;
-        }
-        return totalDistance/pointsList.size()-1;
+        return calculatePerimetr() / pointsList.size();
     }
 
 
